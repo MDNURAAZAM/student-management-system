@@ -139,6 +139,17 @@ class StudentManagementSystem:
         else:
             print(f"Error: Invalid Student ID: {student_id}")
     
+    def display_course_details(self, course_code):
+        course = self.courses.get(course_code)
+        if course:
+            course.display_course_info()
+        else:
+            print(f"Error: Invalid Course Code: {course_code}")
+            
+            
+            
+            
+            
 sms = StudentManagementSystem()
 
 sms.add_new_student("azam", 28, "abc", "0")
